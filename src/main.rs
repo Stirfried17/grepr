@@ -3,6 +3,7 @@ use clap::{command, Arg, ArgMatches};
 fn main() {
 
     let match_result: ArgMatches = command!()
+
         .arg(
             Arg::new("Input")
             )
@@ -13,7 +14,7 @@ fn main() {
 
         .arg(
             Arg::new("Extended Regex")
-                .help("Enables pattern matchins using extended regular expressions")
+                .help("Enables pattern matching using extended regular expressions")
                 .short('E')
                 .long("extended-regexp")
             )
@@ -24,7 +25,56 @@ fn main() {
                 .short('F')
                 .long("fixed-strings")
             )
-            
+
+        .arg(
+            Arg::new("Basic Regex")
+                .help("Matches patterns using basic regex")
+                .short('G')
+                .long("basic-regexp")
+                )
+        .arg(
+            Arg::new("Perl Regex")
+                .help("Matches pattern using perl regex")
+                .short('P')
+                .long("perl-regexp")
+            )
+        
+        .arg(
+            Arg::new("Patterns")
+                .help("Selects patterns to match strings")
+                .short('e')
+                .long("regexp=")
+            )
+
+        .arg(
+            Arg::new("File")
+                .help("Selects a patterns from a file")
+                .short('f')
+                .long("file=")
+            )
+        .arg(
+            Arg::new("Ignore Case")
+                .help("Ignores case sensitivity")
+                .short('i')
+                .long("ignore-case")
+            )
+        .arg(
+            Arg::new("No Ignore Case")
+                .help("Does not ignore case differences")
+                .long("no-ignore-case")
+            )
+        .arg(
+            Arg::new("Invert Match")
+                .help("Shows only lines that do not match pattern")
+                .short('v')
+                .long("invert-match")
+            )
+        .arg(
+            Arg::new("Word Regex")
+                .help("Selects only complete words")
+                .short('w')
+                .long("word-regexp")
+            )
         
 
 
