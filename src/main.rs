@@ -32,6 +32,7 @@ fn main() {
                 .short('G')
                 .long("basic-regexp")
                 )
+
         .arg(
             Arg::new("Perl Regex")
                 .help("Matches pattern using perl regex")
@@ -58,23 +59,63 @@ fn main() {
                 .short('i')
                 .long("ignore-case")
             )
+
         .arg(
             Arg::new("No Ignore Case")
                 .help("Does not ignore case differences")
                 .long("no-ignore-case")
             )
+
         .arg(
             Arg::new("Invert Match")
                 .help("Shows only lines that do not match pattern")
                 .short('v')
                 .long("invert-match")
             )
+
         .arg(
             Arg::new("Word Regex")
                 .help("Selects only complete words")
                 .short('w')
                 .long("word-regexp")
             )
+
+        .arg(
+            Arg::new("Line Regex")
+                .help("Selects the whole line with a match")
+                .short('x')
+                .long("line-regexp")
+            )
+
+        .arg(
+            Arg::new("Count")
+                .help("Counts the total number of matches")
+                .short('c')
+                .long("count")
+            )
+
+        .arg(
+            Arg::new("color")
+                .help("Sets whether to use color to highlight matches")
+                .long("color")
+                .alias("colour")
+                )
+
+        .arg(
+            Arg::new("Files Without Match")
+                .help("Shows only files without matches")
+                .short('L')
+                .long("files-without-matches")
+            )
+
+        .arg(
+            Arg::new("Files With Match")
+                .help("Shows only files with matches")
+                .short('l')
+                .long("files-with-matches")
+            )
+
+            
         
 
 
