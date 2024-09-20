@@ -115,6 +115,36 @@ fn main() {
                 .long("files-with-matches")
             )
 
+        .arg(
+            Arg::new("Max Count")
+                .help("Stops matching after the specified")
+                .short('m')
+                .long("max-count")
+            )
+
+        .arg(
+            Arg::new("Only Matchin")
+                .help("Shows only the matching strings")
+                .short('o')
+                .long("only-matching")
+            )
+
+        .arg(
+            Arg::new("Quiet")
+                .help("Does not write to standard output")
+                .short('q')
+                .long("quiet")
+                .alias("silent")
+            )
+
+        .arg(
+            Arg::new("No Messages")
+                .help("No error messages are written to standard output")
+                .short('s')
+                .long("no-messages")
+            )
+
+        
             
         
 
