@@ -1,4 +1,5 @@
 use clap::{command, Arg, ArgMatches};
+use std::env;
 
 fn main() {
 
@@ -143,6 +144,52 @@ fn main() {
                 .short('s')
                 .long("no-messages")
             )
+
+        .arg(
+            Arg::new("Byte Offset")
+                .help("Print the byte offset within the inout file")
+                .short('b')
+                .long("byte-offset")
+            )
+
+        .arg(
+            Arg::new("With Filename")
+                .help("Print the file name for each match")
+                .short('H')
+                .long("with-filename")
+            )
+        
+        .arg(
+            Arg::new("No Filename")
+            .help("Do not print the file name for each match")
+            .short('h')
+            .long("no-filename")
+            )
+
+        .arg(
+            Arg::new("Label")
+            .help("Displays input actually coming from standard input as coming from file label")
+            .long("label=")
+            )
+
+        .arg(
+            Arg::new("Line Number")
+            .help("Displays line numbers")
+            .short('n')
+            .long("line-number")
+            )
+
+        .arg(
+            Arg::new("Initial Tab")
+            .help("The first character of a line must be a tab")
+            .short('T')
+            .long("intial-tab")
+            )
+        .arg(
+            Arg::new("Null")
+            .help("Outputs a zero byte character instead of the character that usually follows the a file name")
+            .short('Z')
+            .long("null")
 
         
             
