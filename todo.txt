@@ -1,5 +1,6 @@
 
 1. Implement option switches
+shells for all option switches are implemented, need to add function
 
 2. Implement file input and pattern matching
 
