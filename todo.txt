@@ -1,0 +1,16 @@
+
+1. Implement option switches
+
+2. Implement file input and pattern matching
+
+3.-h is used for the help and and file name options if possible want to change help to long help only and keep no filename as -h.
+    This is to keep the options in line with  vanilla grep.
+
+4. Implement input from standard input
+
+5. Implement Regex basic and extended
+
+6. Implement Perl Regex
+
+7. Implement static Regex for specific information and included option switches
+

@@ -162,7 +162,6 @@ fn main() {
         .arg(
             Arg::new("No Filename")
             .help("Do not print the file name for each match")
-            .short('h')
             .long("no-filename")
             )
 
@@ -208,7 +207,7 @@ fn main() {
         .arg(
             Arg::new("Context")
             .help("Shows a number of lines around the pattern match")
-            .short("C")
+            .short('C')
             .long("context=")
             )
 
@@ -224,9 +223,95 @@ fn main() {
             .long("no-group-separator")
             )
 
+        .arg(
+            Arg::new("Binary as Text")
+            .help("Processes binary files as text")
+            .short('a')
+            .long("text")
+            )
         
+        .arg(
+            Arg::new("Binary Files")
+            .help("placeholder: I think it assumes a binary is binary unless told otherwise but honestly not sure what the description for grep means")
+            .long("binary-files=")
+            )
+
+        .arg(
+            Arg::new("Devices")
+            .help("If file is a device use an action to process it")
+            .short('D')
+            .long("devices=")
+            )
+
+        .arg(
+            Arg::new("Directories")
+            .help("If file is a directory use an action to process it")
+            .short('d')
+            .long("directories=")
+            )
+
+        .arg(
+            Arg::new("Exclude")
+            .help("Skip files with name that matches pattern")
+            .long("exclude=")
+            )
+
+        .arg(
+            Arg::new("Exclude From")
+            .help("Skip files whose base name matches pattern")
+            .long("exclude-from")
+            )
+
+        .arg(
+            Arg::new("Exclude Dir")
+            .long("exclude-dir")
+            )
             
-        
+        .arg(
+            Arg::new("Binary Files Withou Match")
+            .help("Processes binary as if there are no matches")
+            .short('I')
+            )
+
+        .arg(
+            Arg::new("Include")
+            .help("Includes specific files that matches patterns")
+            .long("include")
+            )
+
+        .arg(
+            Arg::new("Recursive")
+            .help("Read all files under directories")
+            .short('r')
+            .long("recursive")
+            )
+
+        .arg(
+            Arg::new("Dereference Recursive")
+            .help("Recursive but also follows symbolic links")
+            .short('R')
+            .long("dereference-recursive")
+            )
+
+        .arg(
+            Arg::new("Line Buffered")
+            .help("Use line buffered output")
+            .long("line-buffered")
+            )
+
+        .arg(
+            Arg::new("Binary")
+            .help("Treat files as binary")
+            .short('U')
+            .long("binary")
+            )
+
+        .arg(
+            Arg::new("Null Data")
+            .help("Replace the new line at the end of input and output data with a zero byte")
+            .short('z')
+            .long("null-data")
+            )
 
 
 
