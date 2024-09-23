@@ -190,6 +190,39 @@ fn main() {
             .help("Outputs a zero byte character instead of the character that usually follows the a file name")
             .short('Z')
             .long("null")
+            )
+        .arg(
+            Arg::new("After Context")
+            .help("Shows a number of lines after the pattern match")
+            .short('A')
+            .long("after-context")
+            )
+
+        .arg(
+            Arg::new("Before Context")
+            .help("Shows a number of lines before the pattern match")
+            .short('B')
+            .long("before-context")
+            )
+
+        .arg(
+            Arg::new("Context")
+            .help("Shows a number of lines around the pattern match")
+            .short("C")
+            .long("context=")
+            )
+
+        .arg(
+            Arg::new("Group Separator")
+            .help("With context options prints a separator between matching contexts")
+            .long("group-separator")
+            )
+
+        .arg(
+            Arg::new("No Group Separator")
+            .help("With context options this does not print a separator between matching contexts")
+            .long("no-group-separator")
+            )
 
         
             
